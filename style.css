@@ -648,9 +648,10 @@ img {
 .footer-social {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
-.footer-social a {
+.footer-social a:not(.donate-btn) {
     width: 40px;
     height: 40px;
     background: rgba(255,255,255,0.1);
@@ -659,6 +660,20 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: var(--transition);
+}
+
+.footer-social a.donate-btn {
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 0 1.2rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
     transition: var(--transition);
 }
 
@@ -749,19 +764,19 @@ img {
         font-size: 2.2rem;
     }
     
-    .hero-btns {
+    /* .hero-btns {
         flex-direction: column;
+        align-items: center;
+    } */
+    
+    .hero-btns .btn {
+        width: 200px;
     }
     
     .section-padding {
         padding: 4rem 0;
     }
-    
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
+
 
     .campsite-list {
         grid-template-columns: 1fr;
